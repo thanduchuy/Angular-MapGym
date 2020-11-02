@@ -1,0 +1,22 @@
+<div>
+  <h1 class="mt-2">Search Cinema Easy</h1>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-8">
+        <input type="text" class="form-control form-control-lg" placeholder="Input place you want"
+          [(ngModel)]="placeInput" (ngModelChange)="convertPlace()">
+      </div>
+      <div class="col-4">
+        <button type="button" class="btn btn-success mt-1" (click)="findPlace()">Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mt-3">
+  <div style="height: 530px;" leaflet [leafletOptions]="options" (leafletMapReady)="onMapReady($event)">
+  </div>
+</div>
+
+<div style="text-align: center; font-size: xx-small;">
+  <b>Created By MT</b>
+</div>
