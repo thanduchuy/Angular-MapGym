@@ -112,7 +112,7 @@ export class MapComponent implements OnInit {
           console.log(doc.candidates)
           doc.candidates.forEach(e => {
             this.placeFound.push(marker([e.location.y, e.location.x])
-              .bindPopup("<b>Cinema Name: </b>" + e.address + '.<br><b>Address: </b> ' + e.attributes.Place_addr)
+              .bindPopup("<b>GYM Name: </b>" + e.address + '.<br><b>Address: </b> ' + e.attributes.Place_addr)
               .openPopup()
               //.bindTooltip(e.attributes.Place_addr)
               .setIcon(this.cinemaIcon))
